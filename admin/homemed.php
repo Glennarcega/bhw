@@ -3,9 +3,6 @@
      
      $dataPoints = array(
         array("productName"=> "label", "y"),
-      
-        
-       
      );
      $link=mysqli_connect("localhost","root","");
      mysqli_select_db($link,"my_db");
@@ -22,7 +19,31 @@
      }
     
      ?>
+	 <!--  end condtion graph med  -->
 
+     <!--  start condtion graph address  -->
+	 <?php
+     
+     $dataPoints = array(
+        array("address"=> "label", "y"),
+       
+     );
+     $link=mysqli_connect("localhost","root","");
+     mysqli_select_db($link,"my_db");
+     $test=array();
+ 
+     $count=0;
+    
+     $res=mysqli_query($link,"select * from residentrecords");
+     while($row=mysqli_fetch_array($res))
+     {
+        $test[$count]["label"]=$row["address"];
+         $test[$count]["y"]=$row["quantity_req"];
+         $count=$count+1;
+     }
+    
+     ?>
+     <!--  start condtion graph address  -->
 
 
 
@@ -39,33 +60,7 @@
 		<link rel = "stylesheet" type = "text/css" href = "../css/bootstrap.css " />
 		<link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
 	
-        <script>
-		
-     window.onload = function () {
-      
-     var chart = new CanvasJS.Chart("chartContainer", {
-         animationEnabled: true,
-         theme: "light3", // "light1", "light2", "dark1", "dark2"
-         title: {
-             text: "Medicine"
-         },
-         axisY: {
-             title: "Number of Medicine"
-         },
-         axisX: {
-             title: "Product Name"
-         },
-         data: [{
-             type: "column",
-             dataPoints: <?php echo json_encode($test, JSON_NUMERIC_CHECK); ?>
-         }]
-     });
-     chart.render();
-      
-     }
-     </script> 
-	 
-	 
+       
 
 	</head>
 <body>
@@ -99,8 +94,67 @@
 	</div>
 	<br />
 	<br />
+<!-- medicine graph -->
+	<script>
+		
+		window.onload = function () {
+		 
+		var chart = new CanvasJS.Chart("chartContainer", {
+			animationEnabled: true,
+			theme: "light3", // "light1", "light2", "dark1", "dark2"
+			title: {
+				text: "Medicine"
+			},
+			axisY: {
+				title: "Number of Medicine"
+			},
+			axisX: {
+				title: "Product Name"
+			},
+			data: [{
+				type: "column",
+				dataPoints: <?php echo json_encode($test, JSON_NUMERIC_CHECK); ?>
+			}]
+		});
+		chart.render();
+		 
+		}
+		</script> 
+
+	<!-- end med graphhh -->
+
 	
+	<!-- start address graphhh -->
+
+	<script>
+     window.onload = function () {
+      
+     var chart = new CanvasJS.Chart("chartContainer1", {
+         animationEnabled: true,
+         theme: "light3", // "light1", "light2", "dark1", "dark2"
+         title: {
+             text: "Record"
+         },
+         axisY: {
+             title: "Quantity Request"
+         },
+         axisX: {
+             title: "Address"
+         },
+         data: [{
+             type: "column",
+             dataPoints: <?php echo json_encode($test, JSON_NUMERIC_CHECK); ?>
+         }]
+     });
+     chart.render();
+      
+     }
+     </script>  
+	 <!-- end address graph -->
+
+	<!--  graph design -->
 	<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+	<div id="chartContainer1" style="height: 370px; width: 100%;"></div>
 	<script src="../js/canvasjs.min.js"></script>
 
 </body>
