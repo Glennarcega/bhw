@@ -103,14 +103,14 @@
 
 .form-container form .form-btn{
    background: #fbd0d9;
-   color:crimson;
+   color:green;
    text-transform: capitalize;
    font-size: 20px;
    cursor: pointer;
 }
 
 .form-container form .form-btn:hover{
-   background: crimson;
+   background: green;
    color:#fff;
 }
 
