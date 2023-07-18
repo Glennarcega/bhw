@@ -1,4 +1,7 @@
 <?php
+require_once '../admin_query/validate.php';
+require '../admin_query/name.php';
+
 if (isset($_POST['add_rec'])) {
     $productId = $_POST['productId'];
     $residentName = $_POST['residentName'];
@@ -10,15 +13,24 @@ if (isset($_POST['add_rec'])) {
     $productName = $_POST['productName'];
     $quantity_req = $_POST['quantity_req'];
     $givenDate = $_POST['givenDate'];
-    
-    $query = $conn->query("INSERT INTO `residentrecords` (productId, residentName, dateBirth, age, sex, address, contactNumber, productName, quantity_req, givenDate) VALUES ('$productId', '$residentName', '$dateBirth', '$age', '$sex', '$address', '$contactNumber', '$productName', '$quantity_req', '$givenDate')");
 
-    if ($query) {
+    // Fetch the data from the 'medicines' table
+    $fetchQuery = $conn->query("SELECT `total` FROM `medicines` WHERE `productId` = '$productId'");
+    $fetch = $fetchQuery->fetch_assoc();
+
+    if ($fetchQuery && $fetch) {
         $quantity = $fetch['total'] - $quantity_req;
         $conn->query("UPDATE `medicines` SET `total` = '$quantity' WHERE `productId` = '$productId'");
-        header("location:../admin/userRecMed.php?success=Add Request Successfully");
+        $query = $conn->query("INSERT INTO `residentrecords` (productId, residentName, dateBirth, age, sex, address, contactNumber, productName, quantity_req, givenDate) VALUES ('$productId', '$residentName', '$dateBirth', '$age', '$sex', '$address', '$contactNumber', '$productName', '$quantity_req', '$givenDate')");
+
+        if ($query) {
+            header("Location: ./userRecMed.php?success=Add Request Successfully");
+            exit(); // Add this line to stop further script execution
+        } else {
+            echo "Error: " . mysqli_error($conn);
+        }
     } else {
-        echo "Error: " . mysqli_error($conn);
+        echo "Error: Failed to fetch medicine data.";
     }
 }
 ?>

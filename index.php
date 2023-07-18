@@ -8,13 +8,36 @@
 	<title>Login</title>
 	 <!-- custom css file link  -->
 	 <link rel="stylesheet" href="csslog/style.css">
+	 <style>
+		.logo {
+			width: 220px;
+			height: 150px;
+			border-radius: 50%;
+			margin: auto;
+			margin-bottom: 20px;
+			display: block;
+		}
+		.form-container{
+			background-color: aquamarine;
+			background-repeat: no-repeat;
+			background-size: 1700px 650px;
+		}
+		.cont2{
+			margin:auto;
+			width: 450px;
+		}
+		.form-btn{
+			border:5px solid lightgreen;
+		}
+	</style>
    </head>
 <body>
-      <div class="form-container">
-      	<form class="border shadow p-3 rounded"
-      	      action="php/check-login.php" 
-      	      method="post" 
-      	      style="width: 450px;">
+<div class="form-container">
+		<form class="cont2"
+		      action="php/check-login.php" 
+		      method="post"
+			  style ="background-color: #FFFACD">
+			  <img src="img/ourlogo.png" alt="Logo" class="logo">
       	      <h1 class="text-center p-3">LOGIN</h1>
       	      <?php if (isset($_GET['error'])) { ?>
       	      <div class="alert alert-danger" role="alert">
