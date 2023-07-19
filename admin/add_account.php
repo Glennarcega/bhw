@@ -31,6 +31,7 @@
 	</nav>
 	<div class = "container-fluid">	
 		<ul class = "nav nav-pills">
+		    <li class=""><a href="dashboard.php">Dashboard</a></li>
 			<li><a href = "home.php">Home</a></li>
 			<li class = ""><a href = "registered_user.php">Registered Accounts</a></li>
 			<li class = "active"><a href = "account.php">Accounts</a></li>

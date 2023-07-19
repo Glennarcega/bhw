@@ -60,11 +60,6 @@
 		</ul>
 	</div>
 	<br />
-	<div class="container-fluid">
-		<div class="panel panel-default"></div>
-	</div>
-	<br />
-	<br />
 	
 
 	<!-- Medicine graph -->

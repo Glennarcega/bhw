@@ -54,9 +54,10 @@
 
 	<div class="container-fluid">
 		<ul class="nav nav-pills">
-			<li class="active"><a href="homemed.php">Home</a></li>
-			<li class=""><a href="medicine.php">Medicine</a></li>
-			<li class=""><a href="userRecMed.php">Records</a></li>
+ 			<li class=""><a href="dashboard.php">Dashboard</a></li>
+			<li class="active"><a href="home.php">Home</a></li>
+			<li class = ""><a href = "registered_user.php">Registered Accounts</a></li>
+			<li class = ""><a href = "account.php">Accounts</a></li>
 		</ul>
 	</div>
 	<br />
