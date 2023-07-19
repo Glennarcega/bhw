@@ -21,7 +21,7 @@
 				<li class = "dropdown">
 					<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></i> <?php echo $name;?></a>
 				</li>
-				<li><a href = "index.php">Logout</a></li>	
+				<li><a href = "../logout.php">Logout</a></li>	
 			</ul>
 		</div>
 	</nav>
