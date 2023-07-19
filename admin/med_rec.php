@@ -5,20 +5,18 @@
 ?>
 <html lang = "en">
 	<head>
-		<title>Casa's Transient House</title>
+	    <title>Barangay Health Worker</title>
 		<meta charset = "utf-8" />
 		<meta name = "viewport" content = "width=device-width, initial-scale=1.0" />
 		<link rel = "stylesheet" type = "text/css" href = "../css/bootstrap.css " />
 		<link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
-        <link rel="stylesheet" type="text/css" href="../sendemail/css/bootstrap.css"/>
-		<link rel="stylesheet"  type="text/css" href="../css/css_footer.css">
        
 	</head>
 <body>
 	<nav style = "background-color:rgba(0, 0, 0, 0.1);" class = "navbar navbar-default">
 		<div  class = "container-fluid">
 			<div class = "navbar-header">
-				<a class = "navbar-brand" >Casa's Transient House Online Reservation</a>
+				<a class = "navbar-brand" >Barangay Health Worker</a>
 			</div>
 			<ul class = "nav navbar-nav pull-right ">
 				<li class = "dropdown">
