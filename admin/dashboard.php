@@ -9,6 +9,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
 	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+
+	<style>
+		.User{
+			font-size: 30px;
+			display: block;
+			
+		}
+	</style>
 </head>
 
 <body>
@@ -37,29 +45,33 @@
 		</ul>
 	</div>
 	<br />
+	
 	<div class="container-fluid">
 		<div class="panel panel-default"></div>
+		<h3><b>Dashboard</b></h3>
+		<br />
         <div class="col-xl-3 col-md-3">
-		<div class="card bg-success text-white mb-4">
-			<div class="card-body">total user
+		<div class="card bg-success text-white mb-4" style="border: 2px solid red; border-radius: 5px;">
+			<div class="card-body">
+				<img src="../admin/user.png"  width="74" height="70" style="margin-left: 5px;">
+				&nbsp;&nbsp;&nbsp;&nbsp;<b><p class="User" style ="margin-top: auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total User</p></b>
 				<?php
 				$dash_user_block_query = "SELECT * from users";
 				$dash_user_block_query_run = mysqli_query($conn,$dash_user_block_query);
 				
 				if($category_total = mysqli_num_rows($dash_user_block_query_run))
 				{
-					echo '<h4 class="mb-0"> '.$category_total.' </h4>';
+					echo '<h4 class="mb-0">&nbsp;&nbsp;&nbsp;&nbsp; <b>'.$category_total.' </h4>';
 				}else{
 					echo '<h4 class="mb-0"> no data </h4>';
 				}
 				?>
-                  <a href="registered_user.php">view details</a>
-	</div>
-	
+                <a href="registered_user.php">View Details</a>
+			</div>
+		</div>
 	</div>
 	<br />
 	<br />
-    
 
 </body>
 </html>

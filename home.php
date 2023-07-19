@@ -22,7 +22,7 @@
 			    <h5 class="card-title">
 			    	<?=$_SESSION['name']?>
 			    </h5>
-			    <a href="./admin/home.php" class="btn btn-success">Continue</a>
+			    <a href="./admin/dashboard.php" class="btn btn-success">Continue</a>
 			  </div>
 			</div>
 			
