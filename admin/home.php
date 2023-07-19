@@ -26,7 +26,6 @@
 	}
 ?>
 
-<html lang="en">
 <head>
 	<title>Barangay Health Worker</title>
 	<meta charset="utf-8" />
@@ -56,7 +55,7 @@
 		<ul class="nav nav-pills">
  			<li class=""><a href="dashboard.php">Dashboard</a></li>
 			<li class="active"><a href="home.php">Home</a></li>
-			<li class = ""><a href = "registered_user.php">Registered Accounts</a></li>
+			<li class = ""><a href = "records.php">Records</a></li>
 			<li class = ""><a href = "account.php">Accounts</a></li>
 		</ul>
 	</div>
@@ -77,7 +76,7 @@
 	<div id="addressChartContainer" style="height: 370px; width: 100%;"></div>
 
 	<!-- Include the CanvasJS library -->
-	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+	<script src="../js/canvasjs.min.js"></script>
 
 	<!-- Render the graphs -->
 	<script>

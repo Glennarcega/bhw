@@ -26,7 +26,6 @@
 	}
 ?>
 
-<html lang="en">
 <head>
 	<title>Barangay Health Worker</title>
 	<meta charset="utf-8" />
@@ -71,8 +70,7 @@
 	<div id="addressChartContainer" style="height: 370px; width: 100%;"></div>
 
 	<!-- Include the CanvasJS library -->
-	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-
+	<script src="../js/canvasjs.min.js"></script>
 	<!-- Render the graphs -->
 	<script>
 		window.onload = function () {
