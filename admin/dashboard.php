@@ -3,32 +3,15 @@
 	require_once '../admin_query/validate.php';
 	require '../admin_query/name.php';
 ?>
+
+
 <head>
 	<title>Barangay Health Worker</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
 	<link rel="stylesheet" type="text/css" href="../css/style.css" />
-	
-<style>
-	.card {
-  /* Add shadows to create the "card" effect */
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-}
-
-/* On mouse-over, add a deeper shadow */
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-/* Add some padding inside the card container */
-.container {
-  padding: 2px 16px;
-}
-	</style>
-
-
+	<link rel="stylesheet" href="../csslog/dashboard.css" />
 
 </head>
 
@@ -58,15 +41,16 @@
 		</ul>
 	</div>
 	<br />
-	
 	<div class="container-fluid">
-		<div class="panel panel-default"></div>
+		<div class="panel panel-default">
+		</div>
+	</div>
+	<section class="main"> 
 	
-		<br />
-        <div class="col-xl-3 col-md-3">
-		<div class="card bg-success text-white mb-4" style="border: 2px solid green; border-radius: 5px; margin-left: 70px">
-			<div class="card-body">
-				<?php
+      <div class="main-s">
+        <div class="card">
+          <i class="fas fa-laptop-code"></i>
+          <?php
 				$dash_user_block_query = "SELECT * from medicines";
 				$dash_user_block_query_run = mysqli_query($conn,$dash_user_block_query);
 				
@@ -78,17 +62,11 @@
 					echo '<h4 class="mb-0"> no data </h4>';
 				}
 				?>
-                <center><a href="med_rec.php">View Details</a></center>
-				<br>
-			</div>
-		</div>
-	</div>
-	<div class="container-fluid">
-		<div class="panel panel-default">
-        <div class="col-xl-3 col-md-3">
-		<div class="card bg-success text-white mb-4" style="border: 2px solid green; border-radius: 5px; margin-left: 70px">
-			<div class="card-body">
-				<?php
+          <button class="details"><center><a href="med_rec.php">View Details</a></center></button>
+        </div>
+        <div class="card">
+          <i class="fab fa-wordpress"></i>
+          <?php
 				$dash_user_block_query = "SELECT * from residentrecords";
 				$dash_user_block_query_run = mysqli_query($conn,$dash_user_block_query);
 				
@@ -99,17 +77,11 @@
 					echo '<h4 class="mb-0"> no data </h4>';
 				}
 				?>
-                <center><a href="resident.php">View Details</a></center>
-				<br>
-			</div>
-		</div>
-	</div>
-	<div class="container-fluid">
-        <div class="col-xl-3 col-md-3">
-		<div class="card bg-success text-white mb-4" style="border: 2px solid green; border-radius: 5px; margin-left: 70px">
-			<div class="card-body">
-			
-				<?php
+          <button class="details"> <center><a href="resident.php">View Details</a></center></button>
+        </div>
+        <div class="card">
+          <i class="fas fa-palette"></i>
+		  <?php
 				$dash_user_block_query = "SELECT * from users";
 				$dash_user_block_query_run = mysqli_query($conn,$dash_user_block_query);
 				
@@ -121,16 +93,10 @@
 					echo '<h4 class="mb-0"> no data </h4>';
 				}
 				?>
-               <center> <a href="records.php">View Details</a></center>
+               <button class="details"><center> <a href="records.php">View Details</a></center></button>
 			   <br>
-		</div>
-		
-	</div>
-	<div class="card">
-  <div class="container">
-   
-  </div>
-</div> 
-
+        </div> 
+      </div>
 </body>
 </html>
+

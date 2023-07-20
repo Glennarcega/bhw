@@ -23,14 +23,13 @@
 				<li class = "dropdown">
 					<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></i> <?php echo $name;?></a>
 				</li>
-				<li><a href = "../logout.php">Logout</a></li>	
+				<li><a href = "index.php">Logout</a></li>	
 			</ul>
 		</div>
 	</nav>
 	<div class = "container-fluid">	
 		<ul class = "nav nav-pills">
         <ul class="nav nav-pills">
-             <li class=""><a href="dashboard.php">Dashboard</a></li>
              <li class=""><a href="home.php">Home</a></li>
 			<li class = "active"><a href = "records.php">Records</a></li>
 			<li class = ""><a href = "account.php">Accounts</a></li>
@@ -80,9 +79,6 @@
 		</div>
 	</div>
 	<br />
-
-    
-    
 
 </body>
 <script src = "../js/jquery.js"></script>
