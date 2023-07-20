@@ -23,7 +23,7 @@
 				<li class = "dropdown">
 					<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></i> <?php echo $name;?></a>
 				</li>
-				<li><a href = "index.php">Logout</a></li>	
+				<li><a href = "../logout.php">Logout</a></li>	
 			</ul>
 		</div>
 	</nav>
@@ -37,14 +37,14 @@
 		</ul>	
 	</div>
 	
-	<br />
+	
 	<div class = "container-fluid">	
 		<div class = "panel panel-default">
 		
 			<div class = "panel-body">
 	
 				<a class = "btn btn-info" href="records.php"> Registered Users/Admin</a>
-				<a class = "btn btn-info" href = "med_rec.php">medicine</a>
+				<a class = "btn btn-info" href = "med_rec.php">Medicine</a>
 				<a class = "btn btn-info" href = "resident.php"> Resident</a>
 				<br />
 				<br />

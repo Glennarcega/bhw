@@ -52,7 +52,6 @@
 					<thead>
 						<tr>
 							<th>Product Name</th>
-						
 							<th>Quantity</th>
 							<th>Expiration Date</th>
 							<th>Status</th>

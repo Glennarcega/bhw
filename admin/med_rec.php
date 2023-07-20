@@ -43,7 +43,7 @@
 			<div class = "panel-body">
 	
 				<a class = "btn btn-info" href="records.php"> Registered Users/Admin</a>
-				<a class = "btn btn-info" href = "med_rec.php">medicine</a>
+				<a class = "btn btn-info" href = "med_rec.php">Medicine</a>
 				<a class = "btn btn-info" href = "resident.php"> Resident</a>
 				<br />
 				<br />
@@ -68,7 +68,6 @@
 									<td><?php echo $fetch['total'] ?></td>
 									<td><?php echo $fetch['expDate'] ?></td>
                                     <td><?php echo $fetch['status'] ?></td>
-	
 						<?php
 							}
 						?>

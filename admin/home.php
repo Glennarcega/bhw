@@ -33,6 +33,18 @@
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
 	<link rel="stylesheet" type="text/css" href="../css/style.css" />
 	<link rel="stylesheet" href="../csslog/dashboard.css" />
+
+	<style>
+    .chart-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .chart {
+        width: 48%;
+    }
+</style>
 </head>
 
 <body>
@@ -78,7 +90,7 @@
 					echo '<h1>Medicine <span class="label label-default">'.$category_total.'</span></h1>';
 
 				}else{
-					echo '<h4 class="mb-0"> no data </h4>';
+					echo '<h4 class="mb-0"> No Data </h4>';
 				}
 				?>
           <button class="details"><center><a href="med_rec.php">View Details</a></center></button>
@@ -93,7 +105,7 @@
 				{
 					echo '<h1>Resident <span class="label label-default">'.$category_total.'</span></h1>';
 				}else{
-					echo '<h4 class="mb-0"> no data </h4>';
+					echo '<h4 class="mb-0"> No Data </h4>';
 				}
 				?>
           <button class="details"> <center><a href="resident.php">View Details</a></center></button>
@@ -109,7 +121,7 @@
 			
 					echo '<h1>Users <span class="label label-default">'.$category_total.'</span></h1>';
 				}else{
-					echo '<h4 class="mb-0"> no data </h4>';
+					echo '<h4 class="mb-0"> No Data </h4>';
 				}
 				?>
                <button class="details"><center> <a href="records.php">View Details</a></center></button>
@@ -117,13 +129,21 @@
         </div> 
       </div>
 <br></br><br></br>
-	<!-- Medicine graph -->
-	<div id="medicineChartContainer" style="height: 200px; width: 30%; "></div>
+	<div class="chart-container">
+        <!-- Medicine graph -->
+        <div class="chart">
+            <div id="medicineChartContainer" style="height: 200px;"></div>
+        </div>
+
 	<br>
 	<br />
 	<br />
 	<!-- Address graph -->
-	<div id="addressChartContainer" style="height: 200px; width: 30%;"></div>
+	<div class="chart">
+            <div id="addressChartContainer" style="height: 200px;"></div>
+        </div>
+    </div>
+
 	<!-- Include the CanvasJS library -->
 	<script src="../js/canvasjs.min.js"></script>
 
