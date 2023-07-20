@@ -32,6 +32,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
 	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	
+	<style>
+    .chart-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .chart {
+        width: 48%;
+    }
+</style>
 </head>
 
 <body>
@@ -59,15 +71,25 @@
 		</ul>
 	</div>
 	<br />
+	<div class="container-fluid">
+		<div class="panel panel-default">
+		</div>
+	</div>
 	
+	<div class="chart-container">
+        <!-- Medicine graph -->
+        <div class="chart">
+            <div id="medicineChartContainer" style="height: 300px;"></div>
+        </div>
 
-	<!-- Medicine graph -->
-	<div id="medicineChartContainer" style="height: 370px; width: 100%;"></div>
 	<br>
 	<br />
 	<br />
 	<!-- Address graph -->
-	<div id="addressChartContainer" style="height: 370px; width: 100%;"></div>
+	<div class="chart">
+            <div id="addressChartContainer" style="height: 300px;"></div>
+        </div>
+    </div>
 
 	<!-- Include the CanvasJS library -->
 	<script src="../js/canvasjs.min.js"></script>

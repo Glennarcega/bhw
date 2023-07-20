@@ -36,6 +36,7 @@
 		</ul>	
 		</ul>	
 	</div>
+	<br>
 	
 	
 	<div class = "container-fluid">	
