@@ -118,13 +118,12 @@
       </div>
 <br></br><br></br>
 	<!-- Medicine graph -->
-	<div id="medicineChartContainer" style="height: 370px; width: 100%;"></div>
+	<div id="medicineChartContainer" style="height: 200px; width: 30%; "></div>
 	<br>
 	<br />
 	<br />
 	<!-- Address graph -->
-	<div id="addressChartContainer" style="height: 370px; width: 100%;"></div>
-
+	<div id="addressChartContainer" style="height: 200px; width: 30%;"></div>
 	<!-- Include the CanvasJS library -->
 	<script src="../js/canvasjs.min.js"></script>
 
